@@ -1,4 +1,10 @@
-body {
-  background: tomato;
-  color: #fff;
+@import "_normalize";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }

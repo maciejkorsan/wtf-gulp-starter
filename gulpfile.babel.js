@@ -26,7 +26,7 @@ gulp.task("assets", function() {
 
 gulp.task("html", function() {
   return gulp
-    .src("./src/content/*.html")
+    .src("./src/content/**/*.html")
     .pipe(
       plumber(errorHandler)
     )
@@ -77,7 +77,7 @@ gulp.task(
       open: true // set to false to disable browser autostart
     });
     gulp.watch("src/scss/**/*", gulp.series("sass"));
-    gulp.watch("src/content/*.html", gulp.series("html"));
+    gulp.watch("src/content/**/*.html", gulp.series("html"));
     gulp.watch("src/js/*.js", gulp.series("js"));
     gulp.watch("src/assets/**/*", gulp.series("assets"));
     gulp.watch("dist/**/*").on("change", browserSync.reload);
