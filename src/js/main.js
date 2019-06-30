@@ -1,3 +1,5 @@
 "use strict";
 
-console.log('up and running 🚀')
+import moment from 'moment';
+
+console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
