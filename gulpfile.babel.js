@@ -10,6 +10,9 @@ import postcss from "gulp-postcss";
 import sourcemaps from "gulp-sourcemaps";
 import notify from "gulp-notify";
 import plumber from "gulp-plumber";
+import webpack from 'webpack';
+import webpackConfig from './webpack.config.js';
+import webpackStream from 'webpack-stream';
 
 sass.compiler = require("node-sass");
 
@@ -36,8 +39,10 @@ gulp.task("html", function() {
 gulp.task("js", function() {
   return gulp
     .src("src/js/main.js")
-    .pipe(babel())
-    .on('error', errorHandler)
+    .pipe(
+      plumber(errorHandler)
+    )
+    .pipe(webpackStream(webpackConfig), webpack)
     .pipe(uglify())
     .on('error', errorHandler)
     .pipe(gulp.dest("dist/js"));
