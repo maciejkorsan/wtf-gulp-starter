@@ -1,8 +1,6 @@
 "use strict";
 
 import gulp from "gulp";
-import babel from "gulp-babel";
-import uglify from "gulp-uglify";
 import browserSync from "browser-sync";
 import sass from "gulp-sass";
 import autoprefixer from "autoprefixer";
@@ -10,18 +8,16 @@ import postcss from "gulp-postcss";
 import sourcemaps from "gulp-sourcemaps";
 import notify from "gulp-notify";
 import plumber from "gulp-plumber";
-import webpack from 'webpack';
-import webpackConfig from './webpack.config.js';
-import webpackStream from 'webpack-stream';
+import webpack from "webpack-stream";
 
 sass.compiler = require("node-sass");
 
-const errorHandler = (err) => {
-    notify.onError({
-      title: `Gulp error in ${err.plugin}`,
-      message: err.toString()
-    })(err);
-}
+const errorHandler = err => {
+  notify.onError({
+    title: `Gulp error in ${err.plugin}`,
+    message: err.toString()
+  })(err);
+};
 
 gulp.task("assets", function() {
   return gulp.src("./src/assets/**/*").pipe(gulp.dest("./dist/assets/"));
@@ -30,22 +26,24 @@ gulp.task("assets", function() {
 gulp.task("html", function() {
   return gulp
     .src("./src/content/**/*.html")
-    .pipe(
-      plumber(errorHandler)
-    )
+    .pipe(plumber(errorHandler))
     .pipe(gulp.dest("./dist/"));
 });
 
 gulp.task("js", function() {
-  return gulp
-    .src("src/js/main.js")
-    .pipe(
-      plumber(errorHandler)
-    )
-    .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(uglify())
-    .on('error', errorHandler)
-    .pipe(gulp.dest("dist/js"));
+  return gulp.src('src/js')
+  .pipe(
+    plumber({
+      errorHandler: function(err) {
+        notify.onError({
+          title: `Gulp error in ${err.plugin}`,
+          message: err.toString()
+        })(err);
+      }
+    })
+  )
+  .pipe(webpack(require('./webpack.config.js')))
+  .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task("sass", () => {
