@@ -80,7 +80,7 @@ gulp.task("sass", () => {
 
 gulp.task(
   "serve",
-  gulp.series("sass", "html", "js", "assets", function() {
+  gulp.series("sass", "html", "js", "assets", "pwa", function() {
     browserSync.init({
       server: "./dist",
       open: true // set to false to disable browser autostart
