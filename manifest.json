@@ -9,7 +9,7 @@
   "start_url": "/wtf-gulp-starter/",
   "icons": [
     {
-      "src": "pwa/images/icons/icon-72x72.png",
+      "src": "pwa/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
