@@ -5,7 +5,7 @@
   "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
-  "Scope": "/wtf-gulp-starter/",
+  "scope": "/wtf-gulp-starter/",
   "start_url": "/wtf-gulp-starter/",
   "icons": [
     {
@@ -48,6 +48,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_pages": null
+  ]
 }
