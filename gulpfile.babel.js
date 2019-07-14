@@ -30,6 +30,12 @@ gulp.task("html", function() {
     .pipe(gulp.dest("./dist/"));
 });
 
+gulp.task("pwa", function() {
+  return gulp
+    .src("./src/pwa/**/*")
+    .pipe(gulp.dest("./dist/"));
+});
+
 gulp.task("js", function() {
   return gulp.src('src/js')
   .pipe(
@@ -81,11 +87,12 @@ gulp.task(
     });
     gulp.watch("src/scss/**/*", gulp.series("sass"));
     gulp.watch("src/content/**/*.html", gulp.series("html"));
+    gulp.watch("src/pwa/**/*", gulp.series("pwa"));
     gulp.watch("src/js/*.js", gulp.series("js"));
     gulp.watch("src/assets/**/*", gulp.series("assets"));
     gulp.watch("dist/**/*").on("change", browserSync.reload);
   })
 );
 
-gulp.task("build", gulp.series("sass", "html", "js", "assets"));
+gulp.task("build", gulp.series("sass", "html", "js", "assets", "pwa"));
 gulp.task("default", gulp.series("serve"));
