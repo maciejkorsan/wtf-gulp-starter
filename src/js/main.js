@@ -1,7 +1,6 @@
 "use strict";
 
-// service worker registration - remove if you're not going to use it
-
+// service worker registration - remove if you're not going to use it // for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
@@ -16,7 +15,4 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-
 console.log(`Hello world!`);
-
-

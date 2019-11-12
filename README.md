@@ -1,6 +1,6 @@
 ![cover](https://raw.githubusercontent.com/kasiaizak/wtf-gulp-starter-kit/master/src/assets/img/cover.png)
 
-# WTF Gulp Starter Kit
+# WTF Gulp Starter Kit - with simple PWA support!
 
 ## Uruchomienie strony lokalnie z podglądem zmian na żywo (dla developerów korzystających z Node.js)
 
