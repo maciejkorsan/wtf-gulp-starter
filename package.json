@@ -50,6 +50,6 @@
   },
   "dependencies": {
     "browser-update": "^3.3.1",
-    "eslint": "^6.6.0"
+    "eslint": "^6.8.0"
   }
 }
