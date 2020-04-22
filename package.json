@@ -39,7 +39,7 @@
     "node-sass": "^4.13.1",
     "through2": "^3.0.1",
     "vinyl-named": "^1.1.0",
-    "webpack": "^4.41.5",
+    "webpack": "^4.43.0",
     "webpack-sources": "^1.4.3",
     "webpack-stream": "^5.2.1"
   },
