@@ -37,7 +37,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "node-sass": "^4.14.1",
-    "through2": "^3.0.1",
+    "through2": "^4.0.2",
     "vinyl-named": "^1.1.0",
     "webpack": "^5.38.1",
     "webpack-sources": "^1.4.3",
