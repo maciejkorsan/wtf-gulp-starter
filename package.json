@@ -49,7 +49,7 @@
     ]
   },
   "dependencies": {
-    "browser-update": "^3.3.19",
+    "browser-update": "^3.3.30",
     "eslint": "^7.27.0"
   }
 }
