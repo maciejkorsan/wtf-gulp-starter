@@ -19,34 +19,37 @@
   },
   "homepage": "https://github.com/maciejkorsan/wtf-gulp-starter#readme",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/register": "^7.4.4",
-    "autoprefixer": "^9.5.1",
-    "babel-loader": "^8.0.6",
-    "browser-sync": "^2.26.7",
-    "gh-pages": "^2.0.1",
-    "gulp": "^4.0.1",
-    "gulp-autoprefixer": "^6.1.0",
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/register": "^7.9.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "gh-pages": "^3.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
-    "gulp-notify": "^3.2.0",
+    "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.12.0",
-    "through2": "^3.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-sass": "^6.0.0",
+    "through2": "^4.0.2",
     "vinyl-named": "^1.1.0",
-    "webpack": "^4.35.3",
-    "webpack-sources": "^1.3.0",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^5.38.1",
+    "webpack-sources": "^2.3.0",
+    "webpack-stream": "^6.1.2"
   },
   "babel": {
     "presets": [
       "@babel/preset-env"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "browser-update": "^3.3.30",
+    "eslint": "^7.27.0"
+  }
 }
